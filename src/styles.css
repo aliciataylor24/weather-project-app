@@ -1,0 +1,76 @@
+.card {
+  color: black;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  border: 2px solid;
+  margin-top: 65px;
+  justify-content: center;
+}
+.cloud-sun,
+.cloud-rain,
+.sun-rain,
+.sun {
+  color: green;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+.city {
+  font-size: 48px;
+  color: #3a3151;
+  margin-left: 130px;
+}
+#temperature {
+  font-size: 36px;
+  color: #3a3151;
+  margin-left: 130px;
+}
+#celsius,
+#fahrenheit {
+  font-size: 24px;
+  color: #3a3151;
+}
+.row {
+  color: #3a3151;
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+.feels-like {
+  margin-left: 130px;
+}
+.updated-time {
+  font-size: 12px;
+  margin-left: 130px;
+}
+.temperature-description,
+.precipitation,
+.humidity,
+.wind {
+  font-size: 18px;
+  position: relative;
+  top: 40px;
+  margin-left: 150px;
+}
+.city-name {
+  margin-left: 600px;
+}
+.card-body all {
+  text-align: center;
+  display: flex;
+  flex: 1 1 auto;
+  align-content: center;
+  justify-content: center;
+}
+.emoji {
+  margin-left: 200px;
+  font-size: 36px;
+  margin-bottom: 0px;
+}
+.city-info,
+.temp-info {
+  margin-top: 0px;
+}

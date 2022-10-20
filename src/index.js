@@ -8,7 +8,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = days[now.getDay()];
 let hours = now.getHours();
@@ -47,14 +47,19 @@ function showTemperature(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector("#humid-desc").innerHTML = `Humidity: ${response.data.main.humidity}`;
-  document.querySelector("#wind-desc").innerHTML = `Wind Speed: ${Math.round(response.data.wind.speed)};
-  document.querySelector("#temp-desc").innerHTML = response.data.weather[0].main;
+  document.querySelector(
+    "#humid-desc"
+  ).innerHTML = `Humidity: ${response.data.main.humidity}`;
+  document.querySelector("#wind-desc").innerHTML = `Wind Speed: ${Math.round(
+    response.data.wind.speed
+  )}`;
+  document.querySelector("#temp-desc").innerHTML =
+    response.data.weather[0].main;
 }
 
 function searchCity(city) {
   let apiKey = "668a1c8b3b012a1326e44a41f8a72185";
-  let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric';
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
 

@@ -7,7 +7,7 @@ if (hours < 10) {
 }
 
 if (minutes < 10) {
-  hours = `0${minutes}`;
+  minutes = `0${minutes}`;
 }
 
 let days = [
@@ -59,6 +59,12 @@ function showTemperature(response) {
   document.querySelector(
     "#temp-desc"
   ).innerHTML = `Currently: ${response.data.weather[0].main}`;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   celsiusTemperature = response.data.main.temp;
 }

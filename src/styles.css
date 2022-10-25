@@ -27,6 +27,7 @@
   font-size: 36px;
   color: #3a3151;
   margin-left: 130px;
+  margin-top: -100px;
 }
 #celsius,
 #fahrenheit {
@@ -39,15 +40,14 @@
   width: 100%;
   margin: 0;
 }
-.feels-like {
-  margin-left: 130px;
+#current-id {
+  margin-left: -130px;
 }
 .updated-time {
   font-size: 12px;
   margin-left: 130px;
 }
 .temperature-description,
-.precipitation,
 .humidity,
 .wind {
   font-size: 18px;
@@ -65,11 +65,7 @@
   align-content: center;
   justify-content: center;
 }
-.emoji {
-  margin-left: 200px;
-  font-size: 36px;
-  margin-bottom: 0px;
-}
+
 .city-info,
 .temp-info {
   margin-top: 0px;

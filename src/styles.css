@@ -1,30 +1,32 @@
 .weather-app {
-  max-width: 1500px;
+  max-width: 1000px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 5px;
 }
-
-.card {
+#row-info {
+  padding: 0 10px;
+  margin-right: -655px;
+}
+.col-2 {
+  border: 1px solid #2c2d2e;
+  border-radius: 5px;
+  padding: 10px;
+  flex: 0 1 auto;
+}
+.weather-forecast {
   color: black;
-  margin: 0 auto;
-  float: none;
+  padding: 10px;
   margin-bottom: 10px;
   text-align: center;
   display: flex;
-  border: 2px solid;
-  margin-top: 65px;
-  justify-content: center;
+  margin-top: 25px;
+  align-items: center;
+  width: 100%;
 }
-.cloud-sun,
-.cloud-rain,
-.sun-rain,
-.sun {
-  color: green;
-  text-align: center;
-  justify-content: center;
-  align-content: center;
+.weather-forecast-temperature-min {
+  opacity: 0.6;
 }
 .city {
   font-size: 48px;
@@ -46,10 +48,9 @@
   color: #3a3151;
   position: relative;
   width: 100%;
-  margin: 0;
 }
 #current-id {
-  margin-left: -130px;
+  margin-left: -140px;
 }
 .updated-time {
   font-size: 12px;
@@ -64,14 +65,7 @@
   margin-left: 150px;
 }
 .city-name {
-  margin-left: 600px;
-}
-.card-body all {
-  text-align: center;
-  display: flex;
-  flex: 1 1 auto;
-  align-content: center;
-  justify-content: center;
+  margin-left: 200px;
 }
 
 .city-info,

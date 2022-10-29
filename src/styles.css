@@ -5,25 +5,17 @@
   border: 1px solid #dadde1;
   border-radius: 5px;
 }
-#row-info {
-  padding: 0 10px;
-  margin-right: -500px;
-}
-.col-2 {
+.forecast-day {
   border: 1px solid #2c2d2e;
   border-radius: 5px;
   padding: 10px;
-  flex: 0 1 auto;
 }
 .weather-forecast {
   color: black;
   padding: 10px;
   margin-bottom: 10px;
   text-align: center;
-  display: flex;
   margin-top: 25px;
-  align-items: center;
-  width: 100%;
 }
 .weather-forecast-temperature-min {
   opacity: 0.6;
@@ -46,8 +38,6 @@
 }
 .row {
   color: #3a3151;
-  position: relative;
-  width: 100%;
 }
 #current-id {
   margin-left: -140px;

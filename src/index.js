@@ -34,19 +34,6 @@ function currentTime(event) {
 let cityForm = document.querySelector("#search-form");
 cityForm.addEventListener("submit", currentTime);
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -95,7 +82,7 @@ function displayForecast(response) {
 
 function showLocation(coordinates) {
   let apiKey = "bd5b4461863eddaa6ced0a0a67989e0a";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
@@ -109,7 +96,7 @@ function showTemperature(response) {
   document.querySelector("#humid-desc").innerHTML =
     `Humidity: ${response.data.main.humidity}` + "%";
   document.querySelector("#wind-desc").innerHTML =
-    `Wind Speed: ${Math.round(response.data.wind.speed)}` + "km/h";
+    `Wind Speed: ${Math.round(response.data.wind.speed)}` + " mph";
   document.querySelector(
     "#temp-desc"
   ).innerHTML = `Currently: ${response.data.weather[0].main}`;
@@ -126,7 +113,7 @@ function showTemperature(response) {
 
 function searchCity(city) {
   let apiKey = "bd5b4461863eddaa6ced0a0a67989e0a";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemperature);
 }
 
@@ -138,14 +125,6 @@ function handleSubmit(event) {
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
-
-let getFahrenheit = document.querySelector("#fahrenheit");
-getFahrenheit.addEventListener("click", displayFahrenheitTemperature);
-
-let getCelsius = document.querySelector("#celsius");
-getCelsius.addEventListener("click", displayCelsiusTemperature);
-
-let celsiusTemperature = null;
 
 function currentLocation(event) {
   event.preventDefault();
